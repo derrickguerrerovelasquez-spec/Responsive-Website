@@ -98,6 +98,27 @@
 		text-decoration: none;
 	}
 
+  p {
+    font-size: calc(18 / 16 * 1rem);
+
+    &.medium {
+      font-size: calc(20 / 16 * 1rem);
+
+      @media (width >= calc(600 / 16 * 1rem)) {
+        font-size: calc(24 / 16 * 1rem);
+      }
+    }
+
+    &.large {
+      font-size: calc(24 / 16 * 1rem);
+
+      @media (width >= calc(600 / 16 * 1rem)) {
+        font-size: calc(28 / 16 * 1rem);
+      }
+
+    }
+  }
+
 	img,
 	picture,
 	svg {
@@ -110,6 +131,7 @@
 		width: min(calc(100% - 48px), calc(1200 / 16 * 1rem));
 		margin-inline: auto;
 	}
+
 }
 
 @layer component {
@@ -169,6 +191,52 @@
 			}
 		}
 	}
+
+  .hero {
+    background-color: var(--color-hero-bg);
+    color: var(--color-text-light);
+
+    .hero__wrapper {
+      padding-block: 30px 60px;
+
+      @media (width >= calc(600 / 16 * 1rem)) {
+        padding-block: 40px 80px;
+      }
+    }
+
+    .hero__image {
+      width: calc(200 / 16 * 1rem);
+      margin-block-end: 40px;
+
+      @media (width >= calc(600 / 16 * 1rem)) {
+        width: calc(483 / 16 * 1rem);
+      }
+    }
+
+    .hero__text {
+
+    }
+
+    .hero__title {
+      margin-block-end: 12px;
+
+      @media (width >= calc(600 / 16 * 1rem)) {
+        margin-block-end: 20px;
+      }
+
+
+
+    }
+
+    .hero__content {
+      margin-block-end: 40px;
+
+    }
+
+    .hero__buttons {
+
+    }
+  }
 }
 
 @layer utility {
