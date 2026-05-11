@@ -23,6 +23,7 @@
 		--fs-14: calc(14 / 16 * 1rem);
 		--fs-16: calc(16 / 16 * 1rem);
 		--fs-18: calc(18 / 16 * 1rem);
+    --fs-20: calc(20 / 16 * 1rem);
 		--fs-24: calc(24 / 16 * 1rem);
 		--fs-36: calc(36 / 16 * 1rem);
 		--fs-42: calc(42 / 16 * 1rem);
@@ -336,6 +337,32 @@
 
     .features__description {
       max-width: 40ch;
+    }
+  }
+
+  .fw-feature {
+    background-color: var(--color-fullwidth-bg);
+    color: var(--color-text-light);
+    text-align: center;
+
+    .fw-feature__wrapper {
+      display: grid;
+      justify-items: center;
+    }
+
+    .fw-feature__title {
+      font-weight: 700;
+      margin-block-end: 20px;
+    }
+
+    .fw-feature__description {
+      max-width: 80ch;
+      margin-block-end: 40px;
+    }
+
+    .fw-feature__image {
+      width: 100%;
+      max-width: calc(792 / 16 * 1rem);
     }
   }
 }
